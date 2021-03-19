@@ -4,7 +4,7 @@
 <head>
     <?php include("includes/head.php") ?>
     <?php 
-        include('koneksi/koneksi.php');
+        include('../koneksi/koneksi.php');
         if((isset($_GET['aksi']))&&(isset($_GET['data']))){
             if($_GET['aksi']=='hapus'){
                 $id_buku = $_GET['data'];

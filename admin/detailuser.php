@@ -4,7 +4,7 @@
   <?php include("includes/head.php") ?>
   <?php 
       // session_start();
-      include('koneksi/koneksi.php');
+      include('../koneksi/koneksi.php');
       $id_user = $_GET['id'];
       // get profil
       $sql = "SELECT `nama`, `email`, `foto`, `level`,`username`, `id_user` FROM `user` WHERE `id_user` = '$id_user'";
