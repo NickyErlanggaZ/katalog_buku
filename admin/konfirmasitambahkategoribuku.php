@@ -1,5 +1,5 @@
 <?php 
-    include('koneksi/koneksi.php');
+    include('../koneksi/koneksi.php');
     $kategori_buku = $_POST['kategori_buku'];
     if(empty($kategori_buku)){
         header("Location:tambahkategoribuku.php?notif=tambahkosong");

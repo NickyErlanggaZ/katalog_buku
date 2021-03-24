@@ -5,7 +5,7 @@
     <?php include("includes/head.php") ?>
     <?php 
       session_start();
-      include('koneksi/koneksi.php');
+      include('../koneksi/koneksi.php');
       if(isset($_GET['data'])){
         $id_kategori_blog = $_GET['data'];
         $_SESSION['id_kategori_blog']=$id_kategori_blog;

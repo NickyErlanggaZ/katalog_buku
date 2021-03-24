@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    include('koneksi/koneksi.php');
+    include('../koneksi/koneksi.php');
     if(isset($_SESSION['id_penerbit'])){
         $id_penerbit = $_SESSION['id_penerbit'];
         $penerbit = $_POST['penerbit'];

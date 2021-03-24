@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    include('koneksi/koneksi.php');
+    include('../koneksi/koneksi.php');
     $id_user = $_SESSION['id_user'];
     $id_kategori_blog = $_POST['kategori_blog'];
     $judul = $_POST['judul'];

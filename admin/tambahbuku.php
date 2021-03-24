@@ -3,7 +3,7 @@
 
 <head>
     <?php include("includes/head.php") ?>
-    <?php include("koneksi/koneksi.php") ?>
+    <?php include("../koneksi/koneksi.php") ?>
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">

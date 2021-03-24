@@ -5,7 +5,7 @@
     <?php include("includes/head.php") ?>
     <?php 
       session_start();
-      include('koneksi/koneksi.php');
+      include('../koneksi/koneksi.php');
       if(isset($_GET['data'])){
         $id_penerbit = $_GET['data'];
         $_SESSION['id_penerbit']=$id_penerbit;

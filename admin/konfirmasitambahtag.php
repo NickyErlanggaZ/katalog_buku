@@ -1,5 +1,5 @@
 <?php 
-    include('koneksi/koneksi.php');
+    include('../koneksi/koneksi.php');
     $tag = $_POST['tag'];
     if(empty($tag)){
         header("Location:tambahtag.php?notif=tambahkosong");

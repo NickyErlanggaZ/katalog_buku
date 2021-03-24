@@ -5,7 +5,7 @@
     <?php include("includes/head.php") ?>
     <?php 
     session_start();
-    include('koneksi/koneksi.php');
+    include('../koneksi/koneksi.php');
     $id_user = $_SESSION['id_user'];
 ?>
 </head>

@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    include('koneksi/koneksi.php');
+    include('../koneksi/koneksi.php');
     if(isset($_SESSION['id_kategori_blog'])){
         $id_kategori_blog = $_SESSION['id_kategori_blog'];
         $kategori_blog = $_POST['kategori_blog'];
