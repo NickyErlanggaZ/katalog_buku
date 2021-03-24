@@ -1,7 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-<?php include("includes/head.php") ?> 
+  <?php include("includes/head.php") ?> 
+  <?php 
+      session_start();
+      include('koneksi/koneksi.php');
+      if(isset($_GET['data'])){
+        $id_kategori_buku = $_GET['data'];
+        $_SESSION['id_kategori_buku']=$id_kategori_buku;
+
+        $sql_d = "SELECT `kategori_buku` FROM `kategori_buku` WHERE `id_kategori_buku` = '$id_kategori_buku'";
+        $query_d = mysqli_query($koneksi, $sql_d);
+        while($data_d = mysqli_fetch_row($query_d)){
+          $kategori_buku = $data_d[0];
+        }
+      }
+  ?>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -42,14 +56,18 @@
       <!-- form start -->
       </br>
       <div class="col-sm-10">
-          <div class="alert alert-danger" role="alert">Maaf data Kategori Buku wajib di isi</div>
+          <?php if(!empty($_GET['notif'])){ ?>
+            <?php if($_GET['notif']=="editkosong"){ ?>
+              <div class="alert alert-danger" role="alert">Maaf data Kategori Buku wajib di isi</div>
+            <?php } ?>
+          <?php } ?>
       </div>
-      <form class="form-horizontal">
+      <form class="form-horizontal" method="post" action="konfirmasieditkategoribuku.php">
         <div class="card-body">
           <div class="form-group row">
             <label for="Kategori Buku" class="col-sm-3 col-form-label">Kategori Buku</label>
             <div class="col-sm-7">
-              <input type="text" class="form-control" id="Kategori Buku" value="Website">
+              <input type="text" class="form-control" id="Kategori Buku" name="kategori_buku" value="<?php echo $kategori_buku;?>">
             </div>
           </div>
         </div>
